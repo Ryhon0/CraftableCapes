@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "craftablecapes",
+	"version": "${version}",
+	"name": "CraftableCapes",
+	"description": "Craft and wear any cape you want!",
+	"authors": [
+		"Ryhon"
+	],
+	"contact": {
+		"homepage": "https://ryhon.xyz",
+		"sources": "https://github.com/Ryhon0/CraftableCapes",
+		"issues": "https://github.com/Ryhon0/CraftableCapes/issues"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/craftablecapes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.ryhon.craftablecapes.CraftableCapes"
+		],
+		"fabric-datagen": [
+			"xyz.ryhon.craftablecapes.CraftableCapesDataGenerator"
+		]
+	},
+	"mixins": [
+		"craftablecapes.mixins.json"
+	],
+	"accessWidener": "craftablecapes.accesswidener",
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.20.4",
+		"java": "*",
+		"fabric-api": "*",
+		"trinkets": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.donate": "https://github.com/sponsors/Ryhon0",
+				"modmenu.modrinth": "https://modrinth.com/mod/CraftableCapes",
+				"modmenu.github_releases": "https://github.com/Ryhon0/CraftableCapes/releases",
+				"modmenu.twitter": "https://twitter.com/RyhonDev"
+			}
+		}
+	}
+}
