@@ -19,6 +19,7 @@ import net.minecraft.data.server.recipe.VanillaRecipeProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import net.minecraft.registry.tag.ItemTags;
 import xyz.ryhon.craftablecapes.items.Cape;
@@ -64,8 +65,8 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 	}
 
 	public static class CraftingGenerator extends FabricRecipeProvider {
-		public CraftingGenerator(FabricDataOutput output) {
-			super(output);
+		public CraftingGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture){
+			super(output, registriesFuture);
 		}
 
 		@Override
@@ -103,7 +104,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_SNOWMAN, Items.LIGHT_GRAY_WOOL, Items.SNOW_BLOCK);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_SQUID, Items.LIGHT_BLUE_WOOL, Items.INK_SAC);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_TRANSLATOR, Items.BROWN_WOOL, Items.BOOK);
-			basicCapeRecipe(exporter, CraftableCapes.CAPE_TURTLE, Items.RED_WOOL, Items.SCUTE);
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_TURTLE, Items.RED_WOOL, Items.TURTLE_SCUTE);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_VETERINARIAN, Items.PURPLE_WOOL, Items.COD);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_XBOX, Items.WHITE_WOOL, Items.EMERALD_BLOCK);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_XMAS, Items.RED_WOOL, Items.SPRUCE_SAPLING);
