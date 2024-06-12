@@ -77,6 +77,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_AWESOM, Items.LIME_WOOL, Items.DIAMOND);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_BIRTHDAY, Items.BLUE_WOOL, Items.CAKE);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_BLONK, Items.RED_WOOL, Items.RED_WOOL);
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_CHERRY_BLOSSOM, Items.PINK_WOOL, Items.PINK_PETALS);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_COBALT, Items.LIGHT_BLUE_WOOL, Items.ENDER_PEARL);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_DB, Items.BLUE_WOOL, Items.GOLD_INGOT);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_FROG, Items.BLACK_WOOL, Items.FROGSPAWN);

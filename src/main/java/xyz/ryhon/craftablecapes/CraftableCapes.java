@@ -84,6 +84,8 @@ public class CraftableCapes implements ModInitializer {
 			"2340c0e03dd24a11b15a8b33c2a7e9e32abb2051b2481d0ba7defd635ca7a933", "migrator");
 	public static final OnlineCape CAPE_VANILLA = onlineCape(
 			"f9a76537647989f9a0b6d001e320dac591c359e9e61a31f4ce11c88f207f0ad4", "vanilla");
+	public static final OnlineCape CAPE_CHERRY_BLOSSOM = onlineCape(
+		"afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb", "cherry_blossom");
 	public static final Cape CAPE_TWITCH = cape("twitch");
 	public static final Cape CAPE_TIKTOK = cape("tiktok");
 
