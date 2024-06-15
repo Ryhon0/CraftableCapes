@@ -1,7 +1,11 @@
 package xyz.ryhon.craftablecapes;
 
+import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.texture.PlayerSkinProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
@@ -17,6 +21,8 @@ import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 
 
 public class CraftableCapes implements ModInitializer {

@@ -2,6 +2,7 @@ package xyz.ryhon.craftablecapes.items;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Identifier;
+import xyz.ryhon.craftablecapes.FileCache;
 
 import java.util.ArrayList;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
@@ -18,7 +19,7 @@ public class OnlineCape extends Cape {
 	}
 
 	public Identifier getTexture() {
-		return MinecraftClient.getInstance().getSkinProvider().capeCache.get(
+		return FileCache.capeCache.get(
 				new MinecraftProfileTexture("http://textures.minecraft.net/texture/" + hash, null)).getNow(null);
 	}
 }

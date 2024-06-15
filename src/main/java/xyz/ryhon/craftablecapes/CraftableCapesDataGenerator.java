@@ -1,6 +1,7 @@
 package xyz.ryhon.craftablecapes;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -12,7 +13,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
-import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.VanillaRecipeProvider;
@@ -69,7 +70,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 		}
 
 		@Override
-		public void generate(RecipeExporter exporter) {
+		public void generate(Consumer<RecipeJsonProvider> exporter) {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_10_YEARS, Items.YELLOW_WOOL, Items.GUNPOWDER);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_15_YEARS, Items.LIME_WOOL, Items.GUNPOWDER);
 
@@ -206,7 +207,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 					.offerTo(exporter);
 		}
 
-		void basicCapeRecipe(RecipeExporter exporter, Cape output, Item wool, Item item) {
+		void basicCapeRecipe(Consumer<RecipeJsonProvider> exporter, Cape output, Item wool, Item item) {
 			ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output)
 					.input('W', wool)
 					.input('I', item)

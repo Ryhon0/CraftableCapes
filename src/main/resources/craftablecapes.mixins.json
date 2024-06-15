@@ -3,7 +3,8 @@
 	"package": "xyz.ryhon.craftablecapes.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"PlayerEntityMixin"
+		"PlayerEntityMixin",
+		"MinecraftClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

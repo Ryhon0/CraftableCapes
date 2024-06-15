@@ -1,8 +1,8 @@
 package xyz.ryhon.craftablecapes.mixin;
 
 import net.minecraft.client.network.AbstractClientPlayerEntity;
-import net.minecraft.client.util.SkinTextures;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
 import xyz.ryhon.craftablecapes.items.Cape;
 
@@ -19,13 +19,10 @@ import dev.emi.trinkets.api.TrinketsApi;
 
 @Mixin(AbstractClientPlayerEntity.class)
 public class PlayerEntityMixin {
-	@Inject(at = @At("RETURN"), method = "getSkinTextures", cancellable = true)
-	private void getSkinTextures(CallbackInfoReturnable<SkinTextures> info) {
+	@Inject(at = @At("RETURN"), method = "getCapeTexture", cancellable = true)
+	private void getSkinTextures(CallbackInfoReturnable<Identifier> info) {
 		AbstractClientPlayerEntity th = (AbstractClientPlayerEntity)(Object)this;
 
-		SkinTextures ogtex = info.getReturnValue();
-		if(ogtex == null) return;
-			
 		Optional<TrinketComponent> tco = TrinketsApi.getTrinketComponent(th);
 		if(tco.isEmpty()) return;
 
@@ -35,9 +32,7 @@ public class PlayerEntityMixin {
 			.filter(t -> t.getRight().getItem() instanceof Cape)
 			.findFirst().orElse(null);
 		if(cape == null) return;
-
-		SkinTextures modtex = new SkinTextures(ogtex.texture(), ogtex.textureUrl(), 
-			((Cape)cape.getRight().getItem()).getTexture(), ogtex.elytraTexture(), ogtex.model(), ogtex.secure());
-		info.setReturnValue(modtex);
+		
+		info.setReturnValue(((Cape)cape.getRight().getItem()).getTexture());
 	}
 }

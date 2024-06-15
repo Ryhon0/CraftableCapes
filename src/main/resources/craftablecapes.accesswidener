@@ -1,4 +1,4 @@
 accessWidener v2 named
 
-accessible    class    net/minecraft/client/texture/PlayerSkinProvider$FileCache
-accessible    field    net/minecraft/client/texture/PlayerSkinProvider    capeCache    Lnet/minecraft/client/texture/PlayerSkinProvider$FileCache;
+accessible    field    net/minecraft/client/texture/PlayerSkinProvider    textureManager    Lnet/minecraft/client/texture/TextureManager;
+accessible    field    net/minecraft/client/texture/PlayerSkinProvider    skinCacheDir    Ljava/io/File;
