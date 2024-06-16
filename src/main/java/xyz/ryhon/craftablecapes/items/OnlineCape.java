@@ -1,6 +1,5 @@
 package xyz.ryhon.craftablecapes.items;
 
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Identifier;
 import xyz.ryhon.craftablecapes.FileCache;
 

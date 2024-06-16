@@ -5,8 +5,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.mojang.authlib.minecraft.MinecraftProfileTexture;
-
 import net.minecraft.client.MinecraftClient;
 import xyz.ryhon.craftablecapes.FileCache;
 
@@ -17,7 +15,6 @@ public class MinecraftClientMixin {
 		MinecraftClient th = (MinecraftClient)(Object)this;
 		FileCache.capeCache = new FileCache(
 				th.getSkinProvider().textureManager,
-				th.getSkinProvider().skinCacheDir.toPath(),
-				MinecraftProfileTexture.Type.CAPE);
+				th.getSkinProvider().skinCacheDir.toPath());
 	}
 }
