@@ -131,6 +131,6 @@ public class CraftableCapes implements ModInitializer {
 	}
 
 	public static Identifier Key(String id) {
-		return new Identifier("craftablecapes", id);
+		return Identifier.of("craftablecapes", id);
 	}
 }

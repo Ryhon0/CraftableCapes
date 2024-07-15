@@ -29,7 +29,7 @@
 	"accessWidener": "craftablecapes.accesswidener",
 	"depends": {
 		"fabricloader": "*",
-		"minecraft": "~1.20.0",
+		"minecraft": "~1.21.0",
 		"java": "*",
 		"fabric-api": "*",
 		"trinkets": "*"
