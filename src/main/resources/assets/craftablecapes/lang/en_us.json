@@ -47,5 +47,6 @@
 	"item.craftablecapes.veterinarian_cape": "Veterinarian Caep",
 	"item.craftablecapes.xbox_bday_cape": "1st Birthday Cape",
 	"item.craftablecapes.xbox_cape": "Microsoft Xbox Cape",
-	"item.craftablecapes.xmas_cape": "Christmas 2010 Cape"
+	"item.craftablecapes.xmas_cape": "Christmas 2010 Cape",
+	"tag.item.craftablecapes.capes": "Capes"
 }
