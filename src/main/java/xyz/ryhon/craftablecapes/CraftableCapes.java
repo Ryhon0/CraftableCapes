@@ -97,6 +97,7 @@ public class CraftableCapes implements ModInitializer {
 	public static final Cape CAPE_BACON = cape("bacon");
 	public static final Cape CAPE_BLONK = cape("blonk");
 	public static final Cape CAPE_FROG = cape("frog");
+	public static final Cape CAPE_MCC15 = cape("mcc15");
 	public static final Cape CAPE_MINECON_3 = cape("minecon_3");
 	public static final Cape CAPE_MINECON_4 = cape("minecon_4");
 	public static final Cape CAPE_MINECON_5 = cape("minecon_5");
