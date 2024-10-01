@@ -1,5 +1,7 @@
 package xyz.ryhon.craftablecapes.mixin;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.util.SkinTextures;
 import net.minecraft.item.ItemStack;
@@ -17,6 +19,7 @@ import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 
+@Environment(value=EnvType.CLIENT)
 @Mixin(AbstractClientPlayerEntity.class)
 public class PlayerEntityMixin {
 	@Inject(at = @At("RETURN"), method = "getSkinTextures", cancellable = true)
