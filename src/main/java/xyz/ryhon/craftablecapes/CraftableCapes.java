@@ -109,6 +109,7 @@ public class CraftableCapes implements ModInitializer {
 	public static final Cape CAPE_SNAIL = cape("snail");
 	public static final Cape CAPE_SQUID = cape("squid");
 	public static final Cape CAPE_VETERINARIAN = cape("veterinarian");
+	public static final Cape CAPE_VILLAGER_RESCUE = cape("villager_rescue");
 	public static final Cape CAPE_XBOX = cape("xbox");
 	public static final Cape CAPE_XBOX_BDAY = cape("xbox_bday");
 	public static final Cape CAPE_XMAS = cape("xmas");
