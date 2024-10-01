@@ -115,6 +115,26 @@ public class CraftableCapes implements ModInitializer {
 	public static final Cape CAPE_XMAS = cape("xmas");
 	public static final Cape CAPE_SNIFFER = cape("sniffer");
 
+	public static final Cape CAPE_AMETHYST = cape("mcd_amethyst");
+	public static final Cape CAPE_BLUE = cape("mcd_blue");
+	public static final Cape CAPE_CLOUDY_CLIMB = cape("mcd_cloudy_climb");
+	public static final Cape CAPE_COW_CRUSADER = cape("mcd_cow_crusader");
+	public static final Cape CAPE_DOWNPOUR_CAPE = cape("mcd_downpour");
+	public static final Cape CAPE_FAUNA_FAIRE = cape("mcd_fauna_faire");
+	public static final Cape CAPE_GLOW = cape("mcd_glow");
+	public static final Cape CAPE_HAMMER = cape("mcd_hammer");
+	public static final Cape CAPE_HERO = cape("mcd_hero");
+	public static final Cape CAPE_ICEOLOGER = cape("mcd_iceologer");
+	public static final Cape CAPE_LUMINOUS_NIGHT = cape("mcd_luminous_night");
+	public static final Cape CAPE_MYSTERY = cape("mcd_mystery");
+	public static final Cape CAPE_PHANTOM = cape("mcd_phantom");
+	public static final Cape CAPE_PRISM_CAPE = cape("mcd_prism");
+	public static final Cape CAPE_RED_ROYAL = cape("mcd_red_royal");
+	public static final Cape CAPE_SOUL = cape("mcd_soul");
+	public static final Cape CAPE_TURTLE_SHELL = cape("mcd_turtle_shell");
+	public static final Cape CAPE_YEAR_1 = cape("mcd_year_1");
+	public static final Cape CAPE_YEAR_2 = cape("mcd_year_2");
+
 	@Override
 	public void onInitialize() {
 		Registry.register(Registries.ITEM_GROUP, Key("capes"), CAPE_GROUP);
