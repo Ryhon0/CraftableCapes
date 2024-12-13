@@ -92,6 +92,9 @@ public class CraftableCapes implements ModInitializer {
 	public static final Cape CAPE_10_YEARS = cape("10_years");
 	public static final OnlineCape CAPE_15_YEARS = onlineCape(
 			"cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625", "15_years");
+		
+	public static final OnlineCape CAPE_MOJANG_OFFICE = onlineCape(
+		"5c29410057e32abec02d870ecb52ec25fb45ea81e785a7854ae8429d7236ca26", "mojang_office");
 
 	public static final Cape CAPE_AWESOM = cape("awesom");
 	public static final Cape CAPE_BACON = cape("bacon");
