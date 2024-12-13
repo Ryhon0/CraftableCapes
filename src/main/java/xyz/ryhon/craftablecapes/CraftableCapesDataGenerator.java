@@ -72,6 +72,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 		public void generate(RecipeExporter exporter) {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_10_YEARS, Items.YELLOW_WOOL, Items.GUNPOWDER);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_15_YEARS, Items.LIME_WOOL, Items.GUNPOWDER);
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_MOJANG_OFFICE, Items.BLACK_WOOL, Items.TORCHFLOWER);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_VALENTINE, Items.PINK_WOOL, Items.OXEYE_DAISY);
 
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_BACON, Items.PINK_WOOL, Items.PORKCHOP);
