@@ -96,6 +96,16 @@ public class CraftableCapes implements ModInitializer {
 	public static final OnlineCape CAPE_MOJANG_OFFICE = onlineCape(
 		"5c29410057e32abec02d870ecb52ec25fb45ea81e785a7854ae8429d7236ca26", "mojang_office");
 
+	public static final OnlineCape CAPE_YEARN = onlineCape(
+		"308b32a9e303155a0b4262f9e5483ad4a22e3412e84fe8385a0bdd73dc41fa89", "yearn");
+	public static final OnlineCape CAPE_HOME = onlineCape(
+		"1de21419009db483900da6298a1e6cbf9f1bc1523a0dcdc16263fab150693edd", "home");
+	public static final OnlineCape CAPE_MENACE = onlineCape(
+		"dbc21e222528e30dc88445314f7be6ff12d3aeebc3c192054fba7e3b3f8c77b1", "menace");
+
+	public static final OnlineCape CAPE_COMMON = onlineCape(
+		"5ec930cdd2629c8771655c60eebeb867b4b6559b0e6d3bc71c40c96347fa03f0", "common");
+	
 	public static final Cape CAPE_AWESOM = cape("awesom");
 	public static final Cape CAPE_BACON = cape("bacon");
 	public static final Cape CAPE_BLONK = cape("blonk");

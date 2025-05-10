@@ -1,5 +1,6 @@
 {
 	"itemGroup.craftablecapes.capes": "Capes",
+	"tag.item.craftablecapes.capes": "Capes",
 	"item.craftablecapes.10_years_cape": "Founder's Cape",
 	"item.craftablecapes.15_years_cape": "15th Anniversary Cape",
 	"item.craftablecapes.awesom_cape": "Awesom Caep",
@@ -71,5 +72,8 @@
 	"item.craftablecapes.mcd_year_2_cape": "Gift Wrap Cape",
 	"item.craftablecapes.mojang_office_cape": "Mojang Office Cape",
 	"item.craftablecapes.valentine_cape": "Valentine Cape",
-	"tag.item.craftablecapes.capes": "Capes"
+	"item.craftablecapes.yearn_cape": "Yearn Cape",
+	"item.craftablecapes.home_cape": "Home Cape",
+	"item.craftablecapes.menace_cape": "Menace Cape",
+	"item.craftablecapes.common_cape": "Common Cape"
 }
