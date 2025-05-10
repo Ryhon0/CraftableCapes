@@ -71,6 +71,10 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 
 		@Override
 		public void generate(Consumer<RecipeJsonProvider> exporter) {
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_YEARN, Items.LIGHT_GRAY_WOOL, Items.OAK_PLANKS);
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_HOME, Items.LIGHT_BLUE_WOOL, Items.FLINT_AND_STEEL);
+			basicCapeRecipe(exporter, CraftableCapes.CAPE_MENACE, Items.BLACK_WOOL, Items.FLINT_AND_STEEL);
+
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_10_YEARS, Items.YELLOW_WOOL, Items.GUNPOWDER);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_15_YEARS, Items.LIME_WOOL, Items.GUNPOWDER);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_MOJANG_OFFICE, Items.BLACK_WOOL, Items.TORCHFLOWER);
@@ -113,7 +117,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_VILLAGER_RESCUE, Items.PURPLE_WOOL, Items.GOLDEN_APPLE);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_XBOX, Items.WHITE_WOOL, Items.EMERALD_BLOCK);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_XMAS, Items.RED_WOOL, Items.SPRUCE_SAPLING);
-			
+
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_AMETHYST, Items.PURPLE_WOOL, Items.AMETHYST_SHARD);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_BLUE, Items.CYAN_WOOL, Items.SHEARS);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_CLOUDY_CLIMB, Items.WHITE_WOOL, Items.LIGHT_BLUE_WOOL);
@@ -132,7 +136,7 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_TURTLE_SHELL, Items.LIME_WOOL, Items.SCUTE);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_YEAR_1, Items.PINK_WOOL, Items.FIREWORK_ROCKET);
 			basicCapeRecipe(exporter, CraftableCapes.CAPE_YEAR_2, Items.CYAN_WOOL, Items.STRING);
-			
+
 			ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, CraftableCapes.CAPE_MIGRATOR)
 					.input('B', Items.BLACK_WOOL)
 					.input('R', Items.RED_WOOL)
@@ -228,19 +232,29 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 					.input(CraftableCapes.CAPE_XBOX)
 					.criterion("haswool", VanillaRecipeProvider.conditionsFromTag(ItemTags.WOOL))
 					.offerTo(exporter);
-			
+
 			ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, CraftableCapes.CAPE_PRISM_CAPE)
-				.input('X', Items.BLACK_WOOL)
-				.input('O', Items.GLASS)
-				.input('W', Items.WHITE_WOOL)
-				.input('R', Items.RED_WOOL)
-				.input('Y', Items.YELLOW_WOOL)
-				.input('B', Items.BLUE_WOOL)
-				.pattern("XWX")
-				.pattern("XOX")
-				.pattern("RYB")
-				.criterion("haswool", VanillaRecipeProvider.conditionsFromTag(ItemTags.WOOL))
-				.offerTo(exporter);
+					.input('X', Items.BLACK_WOOL)
+					.input('O', Items.GLASS)
+					.input('W', Items.WHITE_WOOL)
+					.input('R', Items.RED_WOOL)
+					.input('Y', Items.YELLOW_WOOL)
+					.input('B', Items.BLUE_WOOL)
+					.pattern("XWX")
+					.pattern("XOX")
+					.pattern("RYB")
+					.criterion("haswool", VanillaRecipeProvider.conditionsFromTag(ItemTags.WOOL))
+					.offerTo(exporter);
+
+			ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, CraftableCapes.CAPE_COMMON)
+					.input('G', Items.GREEN_WOOL)
+					.input('D', Items.BROWN_WOOL)
+					.input('X', Items.DIRT)
+					.pattern("GGG")
+					.pattern("DXD")
+					.pattern("DDD")
+					.criterion("haswool", VanillaRecipeProvider.conditionsFromTag(ItemTags.WOOL))
+					.offerTo(exporter);
 		}
 
 		void basicCapeRecipe(Consumer<RecipeJsonProvider> exporter, Cape output, Item wool, Item item) {
