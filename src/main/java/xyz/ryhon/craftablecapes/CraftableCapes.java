@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
@@ -155,14 +156,16 @@ public class CraftableCapes implements ModInitializer {
 	}
 
 	public static OnlineCape onlineCape(String hash, String name) {
-		OnlineCape c = new OnlineCape(hash, new Item.Settings());
-		Registry.register(Registries.ITEM, Key(name + "_cape"), c);
+		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Key(name + "_cape"));
+		OnlineCape c = new OnlineCape(hash, new Item.Settings().registryKey(key));
+		Registry.register(Registries.ITEM, key, c);
 		return c;
 	}
 
 	public static Cape cape(String name) {
-		Cape c = new Cape(Key("textures/capes/" + name + ".png"), new Item.Settings());
-		Registry.register(Registries.ITEM, Key(name + "_cape"), c);
+		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Key(name + "_cape"));
+		Cape c = new Cape(Key("textures/capes/" + name + ".png"), new Item.Settings().registryKey(key));
+		Registry.register(Registries.ITEM, key, c);
 		return c;
 	}
 

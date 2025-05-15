@@ -11,7 +11,7 @@ public class Cape extends TrinketItem {
 	
 	public Cape(Identifier texture, Settings settings) {
 		super(settings.maxCount(1));
-		this.texture = texture;	
+		this.texture = texture;
 		
 		AllCapes.add(this);
 	}

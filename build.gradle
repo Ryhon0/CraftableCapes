@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.6-SNAPSHOT'
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 	id "com.modrinth.minotaur" version "2.+"
 }
@@ -21,7 +21,7 @@ modrinth {
     loaders = ["fabric", "quilt"]
     dependencies {
         required.project "fabric-api"
-        required.project "trinkets"
+        required.project "trinkets-canary"
     }
 }
 
@@ -34,10 +34,24 @@ repositories {
 		name = "Ladysnake Libs"
 		url = 'https://maven.ladysnake.org/releases'
 	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 fabricApi {
 	configureDataGeneration()
+	{
+		client = true
+	}
 }
 
 dependencies {
@@ -49,10 +63,12 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "dev.emi:trinkets:${trinkets_version}"
+	modImplementation "maven.modrinth:trinkets-canary:${project.trinkets_version}"
 
 	modImplementation include("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}")
 	modImplementation include("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
+
+	//modRuntimeOnly "maven.modrinth:modmenu:14.0.0-rc.2" 
 }
 
 loom {
