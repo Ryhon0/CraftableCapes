@@ -73,6 +73,8 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 			return new RecipeGenerator(registryLookup, exporter) {
 				@Override
 				public void generate() {
+					basicCapeRecipe(exporter, CraftableCapes.CAPE_OXEYE, Items.BLACK_WOOL, Items.OXEYE_DAISY);
+
 					basicCapeRecipe(exporter, CraftableCapes.CAPE_YEARN, Items.LIGHT_GRAY_WOOL, Items.OAK_PLANKS);
 					basicCapeRecipe(exporter, CraftableCapes.CAPE_HOME, Items.LIGHT_BLUE_WOOL, Items.FLINT_AND_STEEL);
 					basicCapeRecipe(exporter, CraftableCapes.CAPE_MENACE, Items.BLACK_WOOL, Items.FLINT_AND_STEEL);
