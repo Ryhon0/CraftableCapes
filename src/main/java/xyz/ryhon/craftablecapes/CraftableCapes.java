@@ -87,10 +87,13 @@ public class CraftableCapes implements ModInitializer {
 			"f9a76537647989f9a0b6d001e320dac591c359e9e61a31f4ce11c88f207f0ad4", "vanilla");
 	public static final OnlineCape CAPE_CHERRY_BLOSSOM = onlineCape(
 		"afd553b39358a24edfe3b8a9a939fa5fa4faa4d9a9c3d6af8eafb377fa05c2bb", "cherry_blossom");
-	public static final Cape CAPE_TWITCH = cape("twitch");
-	public static final Cape CAPE_TIKTOK = cape("tiktok");
+	public static final OnlineCape CAPE_TWITCH = onlineCape(
+		"cb40a92e32b57fd732a00fc325e7afb00a7ca74936ad50d8e860152e482cfbde", "twitch");
+	public static final OnlineCape CAPE_TIKTOK = onlineCape(
+		"569b7f2a1d00d26f30efe3f9ab9ac817b1e6d35f4f3cfb0324ef2d328223d350", "tiktok");
 
-	public static final Cape CAPE_10_YEARS = cape("10_years");
+	public static final OnlineCape CAPE_10_YEARS = onlineCape(
+		"99aba02ef05ec6aa4d42db8ee43796d6cd50e4b2954ab29f0caeb85f96bf52a1", "10_years");
 	public static final OnlineCape CAPE_15_YEARS = onlineCape(
 			"cd9d82ab17fd92022dbd4a86cde4c382a7540e117fae7b9a2853658505a80625", "15_years");
 		
@@ -111,19 +114,22 @@ public class CraftableCapes implements ModInitializer {
 	public static final Cape CAPE_BACON = cape("bacon");
 	public static final Cape CAPE_BLONK = cape("blonk");
 	public static final Cape CAPE_FROG = cape("frog");
-	public static final Cape CAPE_MCC15 = cape("mcc15");
+	public static final OnlineCape CAPE_MCC15 = onlineCape(
+		"56c35628fe1c4d59dd52561a3d03bfa4e1a76d397c8b9c476c2f77cb6aebb1df", "mcc15");
 	public static final Cape CAPE_MINECON_3 = cape("minecon_3");
 	public static final Cape CAPE_MINECON_4 = cape("minecon_4");
 	public static final Cape CAPE_MINECON_5 = cape("minecon_5");
 	public static final Cape CAPE_NO_CIRCLE = cape("no_circle");
 	public static final Cape CAPE_NYAN = cape("nyan");
 	public static final Cape CAPE_NYE_2011 = cape("nye_2011");
-	public static final Cape CAPE_PANCAPE = cape("pancape");
+	public static final OnlineCape CAPE_PANCAPE = onlineCape(
+		"28de4a81688ad18b49e735a273e086c18f1e3966956123ccb574034c06f5d336", "pancape");
 	public static final Cape CAPE_PRIDE = cape("pride");
 	public static final Cape CAPE_SNAIL = cape("snail");
 	public static final Cape CAPE_SQUID = cape("squid");
 	public static final Cape CAPE_VETERINARIAN = cape("veterinarian");
-	public static final Cape CAPE_VILLAGER_RESCUE = cape("villager_rescue");
+	public static final OnlineCape CAPE_VILLAGER_RESCUE = onlineCape(
+		"7658c5025c77cfac7574aab3af94a46a8886e3b7722a895255fbf22ab8652434", "villager_rescue");
 	public static final Cape CAPE_XBOX = cape("xbox");
 	public static final Cape CAPE_XBOX_BDAY = cape("xbox_bday");
 	public static final Cape CAPE_XMAS = cape("xmas");
