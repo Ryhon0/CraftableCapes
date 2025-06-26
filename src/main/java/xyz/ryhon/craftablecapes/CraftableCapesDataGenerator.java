@@ -17,9 +17,11 @@ import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagBuilder;
 import xyz.ryhon.craftablecapes.items.Cape;
 
 public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
@@ -55,9 +57,9 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 
 		@Override
 		protected void configure(WrapperLookup arg) {
-			FabricTagBuilder capesTag = getOrCreateTagBuilder(CraftableCapes.capesTag);
+			TagBuilder capesTag = getTagBuilder(CraftableCapes.capesTag);
 			for (Cape c : Cape.AllCapes) {
-				capesTag.add(c);
+				capesTag.add(Registries.ITEM.getId(c));
 			}
 		}
 	}
