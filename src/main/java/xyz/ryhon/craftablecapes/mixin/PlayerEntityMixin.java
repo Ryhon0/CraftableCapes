@@ -3,7 +3,7 @@ package xyz.ryhon.craftablecapes.mixin;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
-import net.minecraft.client.util.SkinTextures;
+import net.minecraft.entity.player.SkinTextures;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Pair;
 import xyz.ryhon.craftablecapes.items.Cape;
@@ -22,7 +22,7 @@ import dev.emi.trinkets.api.TrinketsApi;
 @Environment(value=EnvType.CLIENT)
 @Mixin(AbstractClientPlayerEntity.class)
 public class PlayerEntityMixin {
-	@Inject(at = @At("RETURN"), method = "getSkinTextures", cancellable = true)
+	@Inject(at = @At("RETURN"), method = "getSkin", cancellable = true)
 	private void getSkinTextures(CallbackInfoReturnable<SkinTextures> info) {
 		AbstractClientPlayerEntity th = (AbstractClientPlayerEntity)(Object)this;
 
@@ -39,8 +39,11 @@ public class PlayerEntityMixin {
 			.findFirst().orElse(null);
 		if(cape == null) return;
 
-		SkinTextures modtex = new SkinTextures(ogtex.texture(), ogtex.textureUrl(), 
-			((Cape)cape.getRight().getItem()).getTexture(), ogtex.elytraTexture(), ogtex.model(), ogtex.secure());
+
+		SkinTextures modtex = SkinTextures.create(ogtex.body(), 
+			((Cape)cape.getRight().getItem()).getTexture(),
+			ogtex.elytra(),
+			ogtex.model());
 		info.setReturnValue(modtex);
 	}
 }

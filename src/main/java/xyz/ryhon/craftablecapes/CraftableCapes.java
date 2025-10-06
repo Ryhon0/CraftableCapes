@@ -171,7 +171,7 @@ public class CraftableCapes implements ModInitializer {
 
 	public static Cape cape(String name) {
 		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Key(name + "_cape"));
-		Cape c = new Cape(Key("textures/capes/" + name + ".png"), new Item.Settings().registryKey(key));
+		Cape c = new Cape(Key("capes/" + name), new Item.Settings().registryKey(key));
 		Registry.register(Registries.ITEM, key, c);
 		return c;
 	}

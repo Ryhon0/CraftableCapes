@@ -1,7 +1,7 @@
 package xyz.ryhon.craftablecapes.items;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.util.Identifier;
+import net.minecraft.util.AssetInfo.TextureAsset;
 
 import java.util.ArrayList;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
@@ -17,7 +17,7 @@ public class OnlineCape extends Cape {
 		OnlineCapes.add(this);
 	}
 
-	public Identifier getTexture() {
+	public TextureAsset getTexture() {
 		return MinecraftClient.getInstance().getSkinProvider().capeCache.get(
 				new MinecraftProfileTexture("http://textures.minecraft.net/texture/" + hash, null)).getNow(null);
 	}
