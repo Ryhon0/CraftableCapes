@@ -147,6 +147,16 @@ public class CraftableCapesDataGenerator implements DataGeneratorEntrypoint {
 					basicCapeRecipe(exporter, CraftableCapes.CAPE_YEAR_1, Items.PINK_WOOL, Items.FIREWORK_ROCKET);
 					basicCapeRecipe(exporter, CraftableCapes.CAPE_YEAR_2, Items.CYAN_WOOL, Items.STRING);
 
+					createShaped(RecipeCategory.DECORATIONS, CraftableCapes.CAPE_COPPER)
+							.input('C', Items.CHISELED_COPPER)
+							.input('G', Items.GREEN_WOOL)
+							.input('O', Items.ORANGE_WOOL)
+							.pattern("OOO")
+							.pattern("GCO")
+							.pattern("GGG")
+							.criterion("haswool", conditionsFromTag(ItemTags.WOOL))
+							.offerTo(exporter);
+
 					createShaped(RecipeCategory.DECORATIONS, CraftableCapes.CAPE_MIGRATOR)
 							.input('B', Items.BLACK_WOOL)
 							.input('R', Items.RED_WOOL)

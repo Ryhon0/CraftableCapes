@@ -110,6 +110,9 @@ public class CraftableCapes implements ModInitializer {
 	public static final OnlineCape CAPE_COMMON = onlineCape(
 		"5ec930cdd2629c8771655c60eebeb867b4b6559b0e6d3bc71c40c96347fa03f0", "common");
 	
+	public static final OnlineCape CAPE_COPPER = onlineCape(
+		"5e6f3193e74cd16cdd6637d9bae5484e3a37ff2a14c2d157c659a07810b1bdca", "copper");
+	
 	public static final Cape CAPE_AWESOM = cape("awesom");
 	public static final Cape CAPE_BACON = cape("bacon");
 	public static final Cape CAPE_BLONK = cape("blonk");
